@@ -10,7 +10,7 @@ const App = () => {
   return (
     <>
    <Header></Header>
-   <Button>Sort by date</Button>
+  
    <Card> </Card>
    
     </>

@@ -1,7 +1,7 @@
 import React from 'react';
 
 const SingleData = (props) => {
-    //console.log(props.singleData);
+  
     const { id,image, features, published_in, name } = props.singleData;
     console.log(props);
     const handleId =()=>{
@@ -11,7 +11,7 @@ const SingleData = (props) => {
         <div>
             {/* card */}
             <div className="card w-full bg-base-100 shadow-2xl">
-                <figure><img className='w-full h-64' src={image} alt="Shoes" /></figure>
+                <figure><img className='w-full h-64 rounded' src={image?image:'image is not found'} alt="Shoes" /></figure>
                 <div className="card-body">
                     <h2 className="card-title font-bold">Features</h2>
                     {/* featurs map */}
@@ -24,6 +24,9 @@ const SingleData = (props) => {
                     <hr className='border-2 border-info my-4' />
                     <h1 className='text-3xl font-bold'>{name}</h1>
                     {/*  */}
+                    {/* text purpose */}
+                   
+                   
                     <div className='flex justify-between'>
                     <div className='flex'>
                         <span className='mr-2'>
@@ -37,7 +40,7 @@ const SingleData = (props) => {
                     </div>
                     {/*  */}
                     <div>
-                        <span onClick={() => {window.my_modal_4.showModal();props.setUniqueId(id)}} className=' cursor-pointer'>
+                        <span onClick={() => {window.my_modal_4.showModal();props?.setUniqueId(id)}} className=' cursor-pointer'>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
                             </svg>
